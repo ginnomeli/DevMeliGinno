@@ -3,7 +3,7 @@ import sys # Importa la libreria Sys de Python
 import json # Importa la libreria Json de Python, convierto la estructura {} en JSON para poder enviarla al API
 import http.client # Importa la libreria htttp.client de Python
 
-#Configura la conexión con el API
+#Configura la conexion con el API
 conexion = http.client.HTTPConnection ('localhost:1234')
 endpoint = 'informacion'
 
@@ -20,7 +20,7 @@ print(sistema_operativo)
 
 #Si el sistema operativo es Windows
 if sistema_operativo == 'win32':
-    comando_cpuinfo = 'wmic cpu get name /value' # cargo el comando en la variable #/value cambio el formato de salida de la información para que sea 
+    comando_cpuinfo = 'wmic cpu get name /value' # cargo el comando en la variable #/value cambio el formato de salida de la informacion para que sea 
     comando_procesos = 'tasklist'                # presentada de forma más clara y prolija
     comando_usuarios = 'whoami'
     so = 'Windows'
@@ -44,7 +44,7 @@ else:
 # os.popen() Ejecuta el comando en el terminal del SO:
 # read() lee la respuesta del terminal
 # strip()elimina los espacios en la respuesta
-# splitlines() separa la información en lineas
+# splitlines() separa la informacion en lineas
 
 cpuinfo = os.popen(comando_cpuinfo).read().strip() # os.popen en un metodo que va a ejecutar el comando en el servidor del SO
 procesos = os.popen(comando_procesos).read().strip().splitlines() #genero una lista (no es texto) es un vector

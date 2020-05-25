@@ -8,17 +8,15 @@ import json #Importo la libreria json
 import datetime #Importo libreria que maneja fechas
 
 
-
-
 #Inicializo la APi
 app = Flask(__name__) #inicializacion de las librerias
 api = Api(app)
 
 #Creo el endpoint
-class Server(Resource): #Creamos una clase llamada server, que funciona como un endpoint
-    #Defino la información http como post
+class Server(Resource): #Creo una clase llamada server, que funciona como un endpoint
+    #Defino la informacion http como post
     def post(self): #post es el metodo que permita enviar informacion a un endpoint
-        #Obtengo la información desde el agente
+        #Obtengo la informacion desde el agente
         server_info = request.data #request guarda informacion del cliente / agente es todo aquel que invoca el metodo post de la api, guardo la info que envia el agente
         server_ip = request.remote_addr # Agente envia respuesta y agrego informacion de IP para mostrarla en el nombre del archivo
 
@@ -38,7 +36,7 @@ class Server(Resource): #Creamos una clase llamada server, que funciona como un 
         return 'OK'
 
 # Integro el endpoint 'informacion' al API
-api.add_resource(Server, '/informacion') #información es el nombre del endpoint
+api.add_resource(Server, '/informacion') #informacion es el nombre del endpoint
 
 if __name__ == '__main__': #sirve referenciar de donde se esta ejecutando el comando de python
     #Inicio el servidor en el puerto 1234
