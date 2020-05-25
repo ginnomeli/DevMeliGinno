@@ -21,7 +21,7 @@ print(sistema_operativo)
 #Si el sistema operativo es Windows
 if sistema_operativo == 'win32':
     comando_cpuinfo = 'wmic cpu get name /value' # cargo el comando en la variable #/value cambio el formato de salida de la informacion para que sea 
-    comando_procesos = 'tasklist'                # presentada de forma más clara y prolija
+    comando_procesos = 'tasklist'                # presentada de forma mas clara y prolija
     comando_usuarios = 'whoami'
     so = 'Windows'
     comando_version = 'wmic os get Caption /value'
