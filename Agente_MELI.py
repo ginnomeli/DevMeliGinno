@@ -58,7 +58,7 @@ informacion = {
     "usuarios": str(usuarios),
     "so": str(so),
     "version": str(version)
-} #Estructura/diccionario, transformo la codificación del texto 
+} #Estructura/diccionario, transformo la codificacion del texto 
 
 conexion.request('POST', endpoint, json.dumps(informacion))
 respuesta = conexion.getresponse()

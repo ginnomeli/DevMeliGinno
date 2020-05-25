@@ -28,7 +28,7 @@ class Server(Resource): #Creo una clase llamada server, que funciona como un end
         
         #Abro el archivo informacion.txt
         f = open(server_ip + '_' + fecha + '.json', 'wb') #Abro el archivo en modo binario
-        #Escribo lo que mandó el agente
+        #Escribo lo que mando el agente
         f.write(server_info)
         #Cierro el archivo
         f.close()
