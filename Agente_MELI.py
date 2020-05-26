@@ -28,7 +28,7 @@ if sistema_operativo == 'win32':
     
     
 #Si el sistema operativo es Linux
-elif sistema_operativo == 'linux2':
+elif sistema_operativo == 'linux':
     comando_cpuinfo = 'cat /proc/cpuinfo'
     comando_procesos = 'ps -a'
     comando_usuarios = 'w -h'
